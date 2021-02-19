@@ -10,6 +10,3 @@ if Ad <= d
 else
     flag = false;
 end
-
-
-
