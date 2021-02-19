@@ -1,4 +1,4 @@
-# LTF
+# Lagrangian Trajectory Frequency
 
 LTF implements theoretical results developed in [El Aouni, Anass, et al. "A Fourier approach to Lagrangian vortex detection." Chaos: An Interdisciplinary Journal of Nonlinear Science 29.9 (2019): 093106]. 
 
