@@ -1,3 +1,4 @@
+%% procedure to read data from nc file
 file='agulhas.nc';
 
 UT   = ncread(file,'u');
@@ -10,4 +11,3 @@ lat=double(lat); lon=double(lon); time=double(time);
 
 UT(isnan(UT)) = 0;
 VT(isnan(VT)) = 0;
- 
