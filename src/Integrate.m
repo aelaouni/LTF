@@ -1,3 +1,4 @@
+%% Function to compute the flow map
 function [xp_t,yp_t] = Integrate(xi,yi,tspan,options,lon,lat,UT,VT,time)
 %%  geostrophic velocities:
    u_intrp = griddedInterpolant({lon,lat,time},UT,'linear','none');
