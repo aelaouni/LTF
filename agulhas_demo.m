@@ -10,25 +10,28 @@ tspan = linspace(t0,tf,Nt);  % interval
 options = odeset('RelTol',1e-4,'AbsTol',1e-4); % ODE options
 memo1 = ['... Integration time is ',num2str(tf-t0),' days'];
 
-%% initial conditions
+%% initial the grid of introductory conditions
 n = 780;  m = 420;
 x = linspace(-4,9,n);        dx = abs(x(2)-x(1));
 y = linspace(-35,-28,m);     dy = abs(y(2)-y(1));
 [xi,yi] = meshgrid(x,y);
 
-%%
+%% Compute the flow map associated with the grid of introductory conditions   
 tic
 [xp_t,yp_t]=Integrate(xi,yi,tspan,options,lon,lat,UT,VT,time);
+
+%% Compute the Lagrangian Trajectory Frequency of the flow map    
 
 [frey,enery] = LTF(xp_t,yp_t,m,n,Nt);
 toc
 
-%% extract eddies boundaries:
+%% Extract eddies boundaries:
 Nc = 10;                     % Ccontour levels
 l = 3.15;                    % minimal arc-length
 d = 10;                      % convexity deficiency
 eddy = boundary_extract(frey,xi,yi,Nc,l,d);
 
+%% Plot the LTF maps and the boundaries of extracted eddies
 figure
 subplot(2,1,1)
 set(gca,'ydir','normal')
