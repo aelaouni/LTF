@@ -1,3 +1,4 @@
+%%Function to compute the convexity deficiency 
 function flag = convexity(xt,yt,d)
 
 [~,H] = convhull(xt,yt);
