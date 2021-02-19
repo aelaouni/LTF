@@ -1,3 +1,4 @@
+%% function to get closed-curves
 function s = getctr(c)
 
     sz = size(c,2);     
