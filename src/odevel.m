@@ -1,3 +1,4 @@
+%% ODE solver for the geostrophic velocity field
 function dy = odevel(t,y,u,v)
 
 Np = numel(y)/2;           
