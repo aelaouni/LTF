@@ -1,3 +1,4 @@
+%% Function to computer the Lagrangian Trajectory Frequency 
 function [frey,enery] = LTF(xp_t,yp_t,m,n,Nt)
 
 x3 = reshape(xp_t,Nt,m,n);
